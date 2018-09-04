@@ -1,0 +1,29 @@
+package com.mediman.testmediman;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class HomeActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+
+
+    }
+
+    public void gotoLogin(View view){
+
+        Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void gotoRegester(View view) {
+        Intent intent = new Intent(HomeActivity.this, SignupActivity.class);
+        startActivity(intent);
+
+    }
+}
